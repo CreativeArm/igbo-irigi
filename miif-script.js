@@ -28,20 +28,26 @@ const CONFIG = {
 
 /* ── Page Routing ──────────────────────────────────────────── */
 const PAGE_ROUTES = {
-  home: 'index.html', aboutIriji: 'about-iriji.html', ourStory: 'our-story.html',
-  culture: 'culture.html', team: 'team.html', festival: 'festival.html',
-  programme: 'programme.html', performers: 'performers.html', venue: 'venue.html',
-  faqs: 'faqs.html', sponsor: 'sponsor.html', advertise: 'advertise.html',
-  volunteer: 'volunteer.html', support: 'support.html', gallery: 'gallery.html',
-  videos: 'videos.html', livestream: 'live-stream.html', news: 'news.html',
-  brochure: 'brochure.html', register: 'register.html', contact: 'contact.html'
+  home: '/', aboutIriji: 'about-iriji', ourStory: 'our-story',
+  culture: 'culture', team: 'team', festival: 'festival',
+  programme: 'programme', performers: 'performers', venue: 'venue',
+  faqs: 'faqs', sponsor: 'sponsor', advertise: 'advertise',
+  volunteer: 'volunteer', support: 'support', gallery: 'gallery',
+  videos: 'videos', livestream: 'live-stream', news: 'news',
+  brochure: 'brochure', register: 'register', contact: 'contact'
 };
 
 let currentPage = document.body.dataset.page || 'home';
 
 function showPage(pageId) {
   const route = PAGE_ROUTES[pageId];
-  if (route) window.location.href = route;
+  if (!route) return;
+  // If previewing locally via file:// protocol, fallback to .html
+  if (window.location.protocol === 'file:') {
+    window.location.href = route === '/' ? 'index.html' : route + '.html';
+  } else {
+    window.location.href = route;
+  }
 }
 
 function updateNavState() {
