@@ -14,6 +14,7 @@ const CONFIG = {
   venueAddress:  'Wilmslow Road, Fallowfield, Manchester, M14 6LA',
   streamStatus:  'before',  /* 'before' | 'live' | 'after' */
   ctaMode:       'register', /* 'register' | 'watch-live' */
+  registerUrl:   'https://www.eventbrite.co.uk/e/manchester-igbo-iriji-festival-2026-tickets-1988321379771',
   donateUrl:     'https://www.crowdfunder.co.uk/p/manchester-igbo-iriji-festival-2025-appeal-fund',
   pricesVisible: true,
   priceHeadline: 'Amount to be confirmed',
@@ -41,6 +42,10 @@ const PAGE_ROUTES = {
 let currentPage = document.body.dataset.page || 'home';
 
 function showPage(pageId) {
+  if (pageId === 'register' && CONFIG.registerUrl) {
+    window.open(CONFIG.registerUrl, '_blank', 'noopener,noreferrer');
+    return;
+  }
   const route = PAGE_ROUTES[pageId];
   if (!route) return;
   // If previewing locally via file:// protocol, fallback to .html
