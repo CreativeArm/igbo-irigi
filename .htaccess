@@ -31,6 +31,9 @@ RewriteRule ^(.*)$ $1.html [L]
 # Disable directory browsing
 Options -Indexes
 
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
 # Set UTF-8 encoding
 AddDefaultCharset UTF-8
 

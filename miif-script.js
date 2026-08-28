@@ -34,7 +34,8 @@ const PAGE_ROUTES = {
   faqs: 'faqs', sponsor: 'sponsor', advertise: 'advertise',
   volunteer: 'volunteer', support: 'support', gallery: 'gallery',
   videos: 'videos', livestream: 'live-stream', news: 'news',
-  brochure: 'brochure', register: 'register', contact: 'contact'
+  brochure: 'brochure', register: 'register', contact: 'contact',
+  notfound: '404'
 };
 
 let currentPage = document.body.dataset.page || 'home';
