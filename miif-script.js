@@ -99,9 +99,16 @@ let activeMobileSub = null;
 function toggleMobileMenu() {
   mobileMenuOpen = !mobileMenuOpen;
   const menu = document.getElementById('mobile-menu');
+  const burger = document.getElementById('nav-burger');
+  document.documentElement.classList.toggle('menu-open', mobileMenuOpen);
   if (menu) {
     menu.style.display = mobileMenuOpen ? 'flex' : 'none';
     if (!mobileMenuOpen) activeMobileSub = null;
+  }
+  if (burger) {
+    burger.textContent = mobileMenuOpen ? '×' : '☰';
+    burger.setAttribute('aria-label', mobileMenuOpen ? 'Close menu' : 'Open menu');
+    burger.setAttribute('aria-expanded', String(mobileMenuOpen));
   }
 }
 
@@ -109,7 +116,14 @@ function closeMobileMenu() {
   mobileMenuOpen = false;
   activeMobileSub = null;
   const menu = document.getElementById('mobile-menu');
+  const burger = document.getElementById('nav-burger');
+  document.documentElement.classList.remove('menu-open');
   if (menu) menu.style.display = 'none';
+  if (burger) {
+    burger.textContent = '☰';
+    burger.setAttribute('aria-label', 'Open menu');
+    burger.setAttribute('aria-expanded', 'false');
+  }
   // hide all sub-menus
   document.querySelectorAll('.mm-sub').forEach(el => el.style.display = 'none');
 }

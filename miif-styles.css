@@ -835,6 +835,11 @@ h4 {
 }
 
 /* ── Mobile Menu ── */
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+}
+
 .mobile-menu {
   background: linear-gradient(180deg, var(--brand-900) 0%, #1A0707 100%);
   border-bottom: var(--bw-2) solid var(--gold);
@@ -2329,16 +2334,65 @@ h4 {
     gap: var(--sp-3)
   }
 
+  .foot-top {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-7) var(--sp-6);
+  }
+
+  .foot-brand {
+    display: contents;
+  }
+
+  .foot-brand > .brand,
+  .foot-brand > p,
+  .foot-brand > .socials {
+    grid-column: 1 / -1;
+  }
+
   .foot-col {
-    flex-basis: calc((100% - var(--sp-8)) / 2)
+    order: 1;
+  }
+
+  .foot-brand-news {
+    order: 2;
+    grid-column: 1 / -1;
+  }
+
+  .foot-col {
+    min-width: 0;
   }
 
   .head-row-aside {
     margin-left: 0
   }
 
-  .nav-inner {
-    gap: var(--sp-4)
+  .nav-bar .wrap {
+    max-width: none;
+    padding: 0;
+  }
+
+  .nav-bar .nav-inner {
+    width: 100%;
+    height: 64px;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .nav-burger {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
   }
 
   .brand-text {
@@ -2352,7 +2406,7 @@ h4 {
 
 @media (max-width:420px) {
   .foot-col {
-    flex-basis: 100%
+    min-width: 0;
   }
 
   .panel {
