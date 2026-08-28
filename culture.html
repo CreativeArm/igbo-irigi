@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manchester Igbo Iriji Festival | Igbo New Yam Festival UK</title>
+  <meta name="description"
+    content="Manchester Igbo Iriji Festival (MIIF). Celebrating Igbo culture, heritage and community at the Igbo New Yam Festival in Manchester, United Kingdom." />
+  <meta property="og:title" content="Manchester Igbo Iriji Festival | Igbo New Yam Festival UK" />
+  <meta property="og:description"
+    content="Iriji, the Igbo New Yam Festival, celebrated in Manchester. Traditional ceremony, music, dance, cuisine and community." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./miif-styles.css" />
+</head>
+
+<body data-page="culture">
+
+  <!-- ============================================================
+     SITE WRAPPER
+     ============================================================ -->
+  <div id="site-frame" class="site">
+
+    <!-- ── HEADER / NAV ─────────────────────────────────────── -->
+    <header class="site-header">
+      <div class="nav-bar">
+        <div class="wrap nav-inner">
+
+          <!-- Logo / Brand -->
+          <button class="brand" onclick="showPage('home')" aria-label="Manchester Igbo Iriji Festival – home">
+            <img class="brand-mark" src="uploads/logo.png" alt="Manchester Igbo Iriji Festival logo" />
+            <span class="brand-text">
+              <span class="brand-name">Manchester Igbo</span>
+              <span class="brand-sub">Iriji Festival</span>
+            </span>
+          </button>
+
+          <!-- Desktop nav links -->
+          <nav class="nav-links" aria-label="Main navigation">
+            <button class="nav-link" data-nav="home" onclick="showPage('home')">Home</button>
+            <button class="nav-link" data-nav="about" data-mega="about" onclick="toggleMega('about')">About<span
+                class="nav-caret">▾</span></button>
+            <button class="nav-link" data-nav="fest" data-mega="fest" onclick="toggleMega('fest')">Festival<span
+                class="nav-caret">▾</span></button>
+            <button class="nav-link" data-nav="inv" data-mega="inv" onclick="toggleMega('inv')">Get Involved<span
+                class="nav-caret">▾</span></button>
+            <button class="nav-link" data-nav="media" data-mega="media" onclick="toggleMega('media')">Media<span
+                class="nav-caret">▾</span></button>
+            <button class="nav-link" data-nav="brochure" onclick="showPage('brochure')">Brochure</button>
+            <button class="nav-link" data-nav="contact" onclick="showPage('contact')">Contact</button>
+          </nav>
+
+          <!-- CTA + Burger -->
+          <div class="nav-actions">
+            <button class="btn btn-primary" data-cta>Register Now</button>
+            <button class="nav-burger" id="nav-burger" onclick="toggleMobileMenu()" aria-label="Open menu"
+              aria-expanded="false">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mega: About -->
+      <div class="mega-dropdown" id="mega-about" style="display:none">
+        <div class="wrap mega-inner">
+          <div class="mega-col">
+            <div class="mega-head-row">
+              <span class="mega-label">About the Festival</span>
+              <span class="mega-tagline">Heritage, origins & leadership</span>
+            </div>
+            <div class="mega-list">
+              <button class="mega-item" onclick="showPage('aboutIriji')"><span class="mega-item-t">About Iriji <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">What the New Yam Festival means and why
+                  it is celebrated.</span></button>
+              <button class="mega-item" onclick="showPage('ourStory')"><span class="mega-item-t">Our Story <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">How the Manchester festival began and
+                  where it is going.</span></button>
+              <button class="mega-item" onclick="showPage('culture')"><span class="mega-item-t">Igbo Culture & Heritage
+                  <span class="mega-arrow">→</span></span><span class="mega-item-d">Language, dress, music, masquerade
+                  and community life.</span></button>
+              <button class="mega-item" onclick="showPage('team')"><span class="mega-item-t">Our Team <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">The committee and volunteers behind the
+                  festival.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mega: Festival -->
+      <div class="mega-dropdown" id="mega-fest" style="display:none">
+        <div class="wrap mega-inner">
+          <div class="mega-col">
+            <div class="mega-head-row">
+              <span class="mega-label">Festival Information</span>
+              <span class="mega-tagline">Schedule, lineup & travel guide</span>
+            </div>
+            <div class="mega-list">
+              <button class="mega-item" onclick="showPage('festival')"><span class="mega-item-t">2026 Festival <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Everything about this year's celebration
+                  in one place.</span></button>
+              <button class="mega-item" onclick="showPage('programme')"><span class="mega-item-t">Programme <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">The full running order for festival
+                  day.</span></button>
+              <button class="mega-item" onclick="showPage('performers')"><span class="mega-item-t">Performers & Guests
+                  <span class="mega-arrow">→</span></span><span class="mega-item-d">Musicians, dancers, speakers and
+                  special guests.</span></button>
+              <button class="mega-item" onclick="showPage('venue')"><span class="mega-item-t">Venue & Travel <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Getting there, parking, transport and
+                  access.</span></button>
+              <button class="mega-item" onclick="showPage('faqs')"><span class="mega-item-t">FAQs <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Answers to the questions we are asked
+                  most.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mega: Get Involved -->
+      <div class="mega-dropdown" id="mega-inv" style="display:none">
+        <div class="wrap mega-inner">
+          <div class="mega-col">
+            <div class="mega-head-row">
+              <span class="mega-label">Get Involved</span>
+              <span class="mega-tagline">Partner, sponsor & participate</span>
+            </div>
+            <div class="mega-list">
+              <button class="mega-item" onclick="showPage('sponsor')"><span class="mega-item-t">Sponsor Us <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Partner with a festival that reaches
+                  thousands of families.</span></button>
+              <button class="mega-item" onclick="showPage('advertise')"><span class="mega-item-t">Advertise <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Take space in the festival brochure and
+                  on site.</span></button>
+              <button class="mega-item" onclick="showPage('volunteer')"><span class="mega-item-t">Volunteer <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Give your time and skills on the day or
+                  before it.</span></button>
+              <button class="mega-item" onclick="showPage('support')"><span class="mega-item-t">Support Us <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Donate to keep Iriji free and open to
+                  all.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mega: Media -->
+      <div class="mega-dropdown" id="mega-media" style="display:none">
+        <div class="wrap mega-inner">
+          <div class="mega-col">
+            <div class="mega-head-row">
+              <span class="mega-label">Media & Press</span>
+              <span class="mega-tagline">Highlights, photos & livestream</span>
+            </div>
+            <div class="mega-list">
+              <button class="mega-item" onclick="showPage('gallery')"><span class="mega-item-t">Gallery <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Photographs by year and by part of the
+                  day.</span></button>
+              <button class="mega-item" onclick="showPage('videos')"><span class="mega-item-t">Videos <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Highlights, performances and
+                  recaps.</span></button>
+              <button class="mega-item" onclick="showPage('livestream')"><span class="mega-item-t">Live Stream <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Watch the festival wherever you
+                  are.</span></button>
+              <button class="mega-item" onclick="showPage('news')"><span class="mega-item-t">News & Updates <span
+                    class="mega-arrow">→</span></span><span class="mega-item-d">Announcements and cultural
+                  writing.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu" style="display:none">
+        <button class="mm-row" onclick="showPage('home')">Home</button>
+        <button class="mm-row" onclick="toggleMobileSub('about')">About<span class="mm-sign"
+            id="mm-sign-about">+</span></button>
+        <div class="mm-sub" id="mm-sub-about" style="display:none">
+          <button class="mm-sub-row" onclick="showPage('aboutIriji')">About Iriji</button>
+          <button class="mm-sub-row" onclick="showPage('ourStory')">Our Story</button>
+          <button class="mm-sub-row" onclick="showPage('culture')">Igbo Culture and Heritage</button>
+          <button class="mm-sub-row" onclick="showPage('team')">Our Team</button>
+        </div>
+        <button class="mm-row" onclick="toggleMobileSub('fest')">Festival<span class="mm-sign"
+            id="mm-sign-fest">+</span></button>
+        <div class="mm-sub" id="mm-sub-fest" style="display:none">
+          <button class="mm-sub-row" onclick="showPage('festival')">2026 Festival</button>
+          <button class="mm-sub-row" onclick="showPage('programme')">Programme</button>
+          <button class="mm-sub-row" onclick="showPage('performers')">Performers and Guests</button>
+          <button class="mm-sub-row" onclick="showPage('venue')">Venue and Travel</button>
+          <button class="mm-sub-row" onclick="showPage('faqs')">FAQs</button>
+        </div>
+        <button class="mm-row" onclick="toggleMobileSub('inv')">Get Involved<span class="mm-sign"
+            id="mm-sign-inv">+</span></button>
+        <div class="mm-sub" id="mm-sub-inv" style="display:none">
+          <button class="mm-sub-row" onclick="showPage('sponsor')">Sponsor Us</button>
+          <button class="mm-sub-row" onclick="showPage('advertise')">Advertise</button>
+          <button class="mm-sub-row" onclick="showPage('volunteer')">Volunteer</button>
+          <button class="mm-sub-row" onclick="showPage('support')">Support Us</button>
+        </div>
+        <button class="mm-row" onclick="toggleMobileSub('media')">Media<span class="mm-sign"
+            id="mm-sign-media">+</span></button>
+        <div class="mm-sub" id="mm-sub-media" style="display:none">
+          <button class="mm-sub-row" onclick="showPage('gallery')">Gallery</button>
+          <button class="mm-sub-row" onclick="showPage('videos')">Videos</button>
+          <button class="mm-sub-row" onclick="showPage('livestream')">Live Stream</button>
+          <button class="mm-sub-row" onclick="showPage('news')">News and Updates</button>
+        </div>
+        <button class="mm-row" onclick="showPage('brochure')">Brochure</button>
+        <button class="mm-row" onclick="showPage('register')">Register</button>
+        <button class="mm-row" onclick="showPage('contact')">Contact</button>
+        <div class="mm-cta"><button class="btn btn-primary" data-cta>Register Now</button></div>
+      </div>
+    </header>
+
+    <!-- ============================================================
+       MAIN CONTENT — all pages
+       ============================================================ -->
+    <main class="site-main">
+<div id="page-culture" class="page-section is-active">
+        <section class="page-head">
+          <div class="wrap page-head-inner">
+            <span class="crumb">About · Igbo Culture and Heritage</span>
+            <h1 class="h-xl">Igbo culture and heritage</h1>
+            <p class="lead body-dim">A short guide to what you will see and hear at Iriji, written for guests as well as
+              for the community.</p>
+          </div>
+        </section>
+        <section class="section">
+          <div class="wrap stack-lg">
+            <div class="cards">
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(26%20of%20540)%20(1).jpg"
+                  alt="Two women wearing gele and coral bead jewellery" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Dress</span><span class="card-d">Isiagu and the red cap for men, george wrapper,
+                    blouse and gele for women, coral beads for both. Town unions often wear matching cloth so you can
+                    see at a glance who has travelled together.</span></span></div>
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(230%20of%20540)%20(1).jpg"
+                  alt="Dancer performing with a decorated staff" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Music and dance</span><span class="card-d">Ogene, udu, ekwe and igba set the rhythm.
+                    Cultural troupes perform set dances, and the field usually joins in before the afternoon is
+                    over.</span></span></div>
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(440%20of%20540)%20(1).jpg"
+                  alt="Masquerade performer with carved mask" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Mmanwu</span><span class="card-d">Masquerade is performance and remembrance at once.
+                    Give the masquerade room, watch rather than touch, and follow the guidance of the troupe
+                    leaders.</span></span></div>
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(41%20of%20540)%20(1).jpg"
+                  alt="A woman carrying a tray of yam" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Yam</span><span class="card-d">Ji is the king of crops. It appears roasted, pounded
+                    and boiled, and at the ceremony it is carried, blessed, broken and shared before anything else is
+                    eaten.</span></span></div>
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(7%20of%20540)%20(1).jpg"
+                  alt="Three men in matching traditional shirts" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Greeting and kola</span><span class="card-d">Elders are greeted first. Kola nut, oji,
+                    is presented, blessed and broken as a sign of welcome and peace. Igbo kwenu is answered by the whole
+                    gathering.</span></span></div>
+              <div class="card card-3 reveal"><img class="card-img"
+                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(477%20of%20540)%20(1).jpg"
+                  alt="Families gathered with a traditional ruler" loading="lazy" /><span class="card-body"><span
+                    class="card-t">Umunna</span><span class="card-d">The kindred and the town union are the working unit
+                    of Igbo community life. Much of the festival is organised through them, and they lead the
+                    presentations.</span></span></div>
+            </div>
+            <div class="btn-row"><button class="btn btn-outline" onclick="showPage('faqs')">Questions guests
+                ask</button></div>
+          </div>
+        </section>
+      </div><!-- /page-culture -->
+</main><!-- /site-main -->
+
+
+    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="wrap stack-lg">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <div class="brand">
+              <img class="brand-mark" src="uploads/logo.png" alt="Manchester Igbo Iriji Festival logo" />
+              <span class="brand-text"><span class="brand-name">Manchester Igbo</span><span class="brand-sub">Iriji
+                  Festival</span></span>
+            </div>
+            <p class="small body-dim">The Manchester Igbo Iriji Festival is the annual Igbo New Yam Festival held in
+              Manchester, United Kingdom. A day of thanksgiving, ceremony, music, dance and food for the Igbo community
+              and everyone who wants to celebrate with us.</p>
+            <div class="socials">
+              <a class="social" href="https://www.instagram.com/manchesterigboirijifestival/" target="_blank"
+                rel="noopener">Instagram</a>
+              <a class="social" href="https://www.facebook.com/profile.php?id=61561668389554" target="_blank"
+                rel="noopener">Facebook</a>
+              <a class="social" href="https://x.com/irijimanchester" target="_blank" rel="noopener">X</a>
+              <a class="social" href="https://www.youtube.com/@Igboirijimanchesteruk" target="_blank"
+                rel="noopener">YouTube</a>
+            </div>
+            <div class="foot-brand-news">
+              <span class="foot-h">Newsletter</span>
+              <div class="foot-news">
+                <input class="foot-input" type="email" placeholder="Email address" aria-label="Email address" />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div class="foot-col">
+            <span class="foot-h">Quick Links</span>
+            <button class="foot-link" onclick="showPage('home')">Home</button>
+            <button class="foot-link" onclick="showPage('aboutIriji')">About Iriji</button>
+            <button class="foot-link" onclick="showPage('ourStory')">Our Story</button>
+            <button class="foot-link" onclick="showPage('team')">Our Team</button>
+            <button class="foot-link" onclick="showPage('contact')">Contact</button>
+          </div>
+          <div class="foot-col">
+            <span class="foot-h">Festival</span>
+            <button class="foot-link" onclick="showPage('festival')">2026 Festival</button>
+            <button class="foot-link" onclick="showPage('programme')">Programme</button>
+            <button class="foot-link" onclick="showPage('performers')">Performers and Guests</button>
+            <button class="foot-link" onclick="showPage('venue')">Venue and Travel</button>
+            <button class="foot-link" onclick="showPage('faqs')">FAQs</button>
+          </div>
+          <div class="foot-col">
+            <span class="foot-h">Get Involved</span>
+            <button class="foot-link" onclick="showPage('sponsor')">Sponsor Us</button>
+            <button class="foot-link" onclick="showPage('advertise')">Advertise</button>
+            <button class="foot-link" onclick="showPage('volunteer')">Volunteer</button>
+            <button class="foot-link" onclick="showPage('support')">Support Us</button>
+            <button class="foot-link" onclick="showPage('brochure')">Brochure</button>
+          </div>
+          <div class="foot-col">
+            <span class="foot-h">Contact</span>
+            <a class="foot-link" href="tel:07546201111">07546 201111</a>
+            <span class="foot-link">Email to be confirmed</span>
+            <span class="foot-link">Manchester, United Kingdom</span>
+            <button class="foot-link" onclick="showPage('register')">Register to attend</button>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>&copy; 2026 Manchester Igbo Iriji Festival</span>
+          <span class="foot-legal">
+            <span>(C) ProspexDigitas 2026</span>
+            <button class="foot-link" onclick="showPage('contact')">Privacy and contact</button>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /site-frame -->
+
+  <script src="./cloudinary-config.js"></script>
+  <script src="./miif-script.js"></script>
+</body>
+
+</html>
