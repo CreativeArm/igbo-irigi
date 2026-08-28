@@ -11,7 +11,7 @@ const CONFIG = {
   dateLabel:     'Saturday 5th September 2026',
   festivalTime:  '11:00 AM',
   venueName:     'Platt Fields Park',
-  venueAddress:  'Platt Fields Park, Manchester, M14',
+  venueAddress:  'Wilmslow Road, Fallowfield, Manchester, M14 6LA',
   streamStatus:  'before',  /* 'before' | 'live' | 'after' */
   ctaMode:       'register', /* 'register' | 'watch-live' */
   donateUrl:     'https://www.crowdfunder.co.uk/p/manchester-igbo-iriji-festival-2025-appeal-fund',
