@@ -215,22 +215,22 @@ function toggleFaq(index) {
 
 /* ── Gallery ───────────────────────────────────────────────── */
 const GALLERY_DATA = [
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(92%20of%20540)%20(1).jpg',  alt:'Elders holding gold baskets of yam at the ceremony table', cat:'Ceremony', wide:true },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(41%20of%20540)%20(1).jpg',  alt:'A woman in green carrying a covered tray of yam',           cat:'Ceremony' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(87%20of%20540)%20(1).jpg',  alt:'Row of guests in matching gele watching the ceremony',       cat:'Ceremony' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(440%20of%20540)%20(1).jpg', alt:'Masquerade performer with a carved mask among drummers',     cat:'Dance', wide:true },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(230%20of%20540)%20(1).jpg', alt:'Cultural dancer mid step with a decorated staff',           cat:'Dance' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(172%20of%20540)%20(1).jpg', alt:'A dancer celebrating with a horsetail fan',                 cat:'Dance' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(383%20of%20540)%20(1).jpg', alt:'A woman dancing in purple gele and embroidered wrapper',    cat:'Dance' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(382%20of%20540)%20(1).jpg', alt:'Guests dancing together on the field',                      cat:'Dance', wide:true },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(386%20of%20540)%20(1).jpg', alt:"Women's group in blue gele and orange wrappers",            cat:'Dress' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(26%20of%20540)%20(1).jpg',  alt:'Two women in green and blue gele with coral beads',         cat:'Dress' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(88%20of%20540)%20(1).jpg',  alt:'Six women in colourful wrappers holding horsetail fans',    cat:'Dress', wide:true },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(37%20of%20540)%20(1).jpg',  alt:'A guest in a patterned isiagu shirt and knitted cap',       cat:'Dress' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(477%20of%20540)%20(1).jpg', alt:'Families gathered with a traditional ruler',                cat:'Community', wide:true },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(12%20of%20540)%20(1).jpg',  alt:'Three women in yellow gele holding a baby',                 cat:'Community' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(30%20of%20540)%20(1).jpg',  alt:'Five men in traditional dress and caps',                    cat:'Community' },
-  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(7%20of%20540)%20(1).jpg',   alt:'Three men in matching lion print shirts and red caps',      cat:'Community' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(92%20of%20540)%20(1).webp',  alt:'Elders holding gold baskets of yam at the ceremony table', cat:'Ceremony', wide:true },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(41%20of%20540)%20(1).webp',  alt:'A woman in green carrying a covered tray of yam',           cat:'Ceremony' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(87%20of%20540)%20(1).webp',  alt:'Row of guests in matching gele watching the ceremony',       cat:'Ceremony' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(440%20of%20540)%20(1).webp', alt:'Masquerade performer with a carved mask among drummers',     cat:'Dance', wide:true },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(230%20of%20540)%20(1).webp', alt:'Cultural dancer mid step with a decorated staff',           cat:'Dance' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(172%20of%20540)%20(1).webp', alt:'A dancer celebrating with a horsetail fan',                 cat:'Dance' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(383%20of%20540)%20(1).webp', alt:'A woman dancing in purple gele and embroidered wrapper',    cat:'Dance' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(382%20of%20540)%20(1).webp', alt:'Guests dancing together on the field',                      cat:'Dance', wide:true },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(386%20of%20540)%20(1).webp', alt:"Women's group in blue gele and orange wrappers",            cat:'Dress' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(26%20of%20540)%20(1).webp',  alt:'Two women in green and blue gele with coral beads',         cat:'Dress' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(88%20of%20540)%20(1).webp',  alt:'Six women in colourful wrappers holding horsetail fans',    cat:'Dress', wide:true },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(37%20of%20540)%20(1).webp',  alt:'A guest in a patterned isiagu shirt and knitted cap',       cat:'Dress' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(477%20of%20540)%20(1).webp', alt:'Families gathered with a traditional ruler',                cat:'Community', wide:true },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(12%20of%20540)%20(1).webp',  alt:'Three women in yellow gele holding a baby',                 cat:'Community' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(30%20of%20540)%20(1).webp',  alt:'Five men in traditional dress and caps',                    cat:'Community' },
+  { src:'uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(7%20of%20540)%20(1).webp',   alt:'Three men in matching lion print shirts and red caps',      cat:'Community' },
 ];
 
 let galFilter = 'all';
