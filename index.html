@@ -479,15 +479,13 @@
           </section>
 
           <!-- Countdown -->
-          <section class="section section-dark pattern">
+          <section class="section section-dark pattern countdown-section">
             <div class="wrap stack-lg">
               <div class="head-row">
                 <div class="head-row-body reveal">
                   <span class="eyebrow eyebrow-dark"><span class="eyebrow-mark"></span>Festival Countdown</span>
                   <h2 class="h-lg" style="color:var(--cream)">Counting down to Iriji</h2>
                 </div>
-                <div class="head-row-aside"><button class="btn btn-primary" onclick="showPage('register')">Register
-                    Now</button></div>
               </div>
               <div class="count">
                 <div class="count-cell"><span class="count-n" id="cd-days">365</span><span class="count-l">Days</span>
@@ -499,8 +497,13 @@
                 <div class="count-cell"><span class="count-n" id="cd-seconds">00</span><span
                     class="count-l">Seconds</span></div>
               </div>
-              <div class="event-item"><span class="event-k">Next festival</span><span class="event-v"
-                  style="color:var(--cream)" data-field="dateLabel"></span></div>
+              <div class="countdown-footer">
+                <div class="event-item"><span class="event-k">Next festival</span><span class="event-v"
+                    style="color:var(--cream)" data-field="dateLabel"></span></div>
+                <div class="countdown-cta">
+                  <button class="btn btn-primary" onclick="showPage('register')">Register Now</button>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -797,8 +800,7 @@
           </div>
           <div class="foot-col">
             <span class="foot-h">Contact</span>
-            <a class="foot-link" href="tel:07546201111">07546 201111</a>
-            <span class="foot-link">Email to be confirmed</span>
+            <a class="foot-link" href="mailto:info@miif.org.uk">info@miif.org.uk</a>
             <span class="foot-link">Manchester, United Kingdom</span>
             <button class="foot-link" onclick="showPage('register')">Register to attend</button>
           </div>

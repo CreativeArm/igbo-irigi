@@ -101,6 +101,7 @@ function toggleMobileMenu() {
   const menu = document.getElementById('mobile-menu');
   const burger = document.getElementById('nav-burger');
   document.documentElement.classList.toggle('menu-open', mobileMenuOpen);
+  document.body.classList.toggle('menu-open', mobileMenuOpen);
   if (menu) {
     menu.style.display = mobileMenuOpen ? 'flex' : 'none';
     if (!mobileMenuOpen) activeMobileSub = null;
@@ -118,6 +119,7 @@ function closeMobileMenu() {
   const menu = document.getElementById('mobile-menu');
   const burger = document.getElementById('nav-burger');
   document.documentElement.classList.remove('menu-open');
+  document.body.classList.remove('menu-open');
   if (menu) menu.style.display = 'none';
   if (burger) {
     burger.textContent = '☰';

@@ -134,8 +134,8 @@
   --lift: -6px;
   --sh-1: 0 18px 44px rgba(67, 7, 10, 0.18);
   --sh-2: 0 24px 60px rgba(0, 0, 0, 0.28);
-  --z-nav: 20;
-  --z-top: 50;
+  --z-nav: 1000;
+  --z-top: 1050;
 }
 
 /* ── Animations ── */
@@ -712,6 +712,7 @@ h4 {
 .mega,
 .mega-dropdown {
   position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   width: 100%;
@@ -722,7 +723,10 @@ h4 {
   border-bottom: var(--bw-2) solid var(--gold);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
   animation: fadeUp 0.24s cubic-bezier(0.16, 1, 0.3, 1) both;
-  z-index: 25;
+  z-index: 1001;
+  max-height: calc(100vh - 78px);
+  max-height: calc(100dvh - 78px);
+  overflow-y: auto;
 }
 
 .mega-inner {
@@ -836,11 +840,20 @@ h4 {
 
 /* ── Mobile Menu ── */
 html.menu-open,
-html.menu-open body {
-  overflow: hidden;
+body.menu-open {
+  overscroll-behavior: contain;
 }
 
 .mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: calc(100vh - 64px);
+  max-height: calc(100dvh - 64px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background: linear-gradient(180deg, var(--brand-900) 0%, #1A0707 100%);
   border-bottom: var(--bw-2) solid var(--gold);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
@@ -848,6 +861,7 @@ html.menu-open body {
   flex-direction: column;
   padding: var(--sp-4) 0;
   animation: fadeUp 0.22s var(--ease-1) both;
+  z-index: 1001;
 }
 
 .mm-row {
@@ -1296,6 +1310,39 @@ html.menu-open body {
 }
 
 /* ── Countdown ── */
+.countdown-section {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.countdown-section .stack-lg {
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+.countdown-section .head-row {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-section .head-row-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-section .eyebrow {
+  justify-content: center;
+}
+
 .count {
   display: flex;
   gap: var(--cg);
@@ -1336,6 +1383,31 @@ html.menu-open body {
   text-transform: uppercase;
   letter-spacing: var(--ls-3);
   color: var(--cream-dim)
+}
+
+.countdown-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  margin-top: 0;
+}
+
+.countdown-section .event-item {
+  flex: none;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 2px;
+}
+
+.countdown-cta {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* ── Timeline ── */
@@ -2264,9 +2336,35 @@ html.menu-open body {
   .card,
   .tier,
   .person,
-  .count-cell,
   .fact {
     flex-basis: calc((100% - var(--cg)) / 2)
+  }
+
+  .countdown-section {
+    padding-bottom: 16px;
+  }
+
+  .count {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .count-cell {
+    flex: none;
+    width: 100%;
+    padding: 14px 6px;
+    gap: 4px;
+  }
+
+  .count-n {
+    font-size: 26px;
+    min-width: 0;
+  }
+
+  .count-l {
+    font-size: 10px;
+    letter-spacing: 0.05em;
   }
 
   .tile,
@@ -2305,12 +2403,63 @@ html.menu-open body {
   .card,
   .tier,
   .person,
-  .count-cell,
   .fact,
   .field,
   .tile,
   .tile-wide {
     flex-basis: 100%
+  }
+
+  .countdown-section {
+    padding: 20px 0;
+  }
+
+  .countdown-section .stack-lg {
+    gap: 12px;
+  }
+
+  .countdown-footer {
+    gap: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .countdown-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .countdown-cta .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .count {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .count-cell {
+    flex: none;
+    width: 100%;
+    padding: 10px 3px;
+    gap: 2px;
+    border-radius: var(--r-2);
+  }
+
+  .count-n {
+    font-size: 20px;
+    min-width: 0;
+  }
+
+  .count-l {
+    font-size: 9px;
+    letter-spacing: 0.03em;
   }
 
   .btn-row .btn {
