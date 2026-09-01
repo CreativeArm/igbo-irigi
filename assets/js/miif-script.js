@@ -456,7 +456,48 @@ document.addEventListener('DOMContentLoaded', function() {
   const sel = document.getElementById('page-select');
   if (sel) sel.addEventListener('change', e => showPage(e.target.value));
 
+  // Welcome video autoplay on screen
+  bindWelcomeVideo();
+
   // FAQ: close all answers initially
   document.querySelectorAll('.faq-a').forEach(el => el.style.display = 'none');
 
 });
+
+/* ── Welcome to Iriji Video Controller ─────────────────────── */
+function bindWelcomeVideo() {
+  const video = document.getElementById('welcome-video');
+  if (!video) return;
+
+  // IntersectionObserver: automatically play when in viewport, pause when scrolled away
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(video);
+  } else {
+    video.play().catch(() => {});
+  }
+}
+
+function toggleWelcomeSound() {
+  const video = document.getElementById('welcome-video');
+  const btn = document.getElementById('welcome-sound-btn');
+  if (!video || !btn) return;
+  video.muted = !video.muted;
+  if (video.muted) {
+    btn.textContent = '🔇';
+    btn.setAttribute('aria-label', 'Unmute video');
+  } else {
+    btn.textContent = '🔊';
+    btn.setAttribute('aria-label', 'Mute video');
+  }
+}
+
+

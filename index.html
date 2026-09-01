@@ -303,26 +303,37 @@
             </div>
           </div>
 
-          <!-- Welcome section -->
-          <section class="section">
-            <div class="wrap split">
-              <div class="split-media"><img class="img-tall"
-                  src="uploads/ICM%20Iriji%202025%20-%20@pixelhivemedia%20(41%20of%20540)%20(1).webp"
-                  alt="A woman in green carrying a covered tray of yam" loading="lazy" /></div>
-              <div class="split-body reveal">
-                <span class="eyebrow"><span class="eyebrow-mark"></span>Welcome to Iriji</span>
-                <h2 class="h-lg">The first yam of the season, shared with the whole community</h2>
-                <p class="body">Iriji is the Igbo New Yam Festival. It marks the end of the farming season and the
-                  moment when the first yams of the harvest may be eaten. Yam is the king of crops in Igbo land, so the
-                  day begins with thanksgiving to Chukwu, prayers led by elders, and the breaking and sharing of yam.
-                </p>
-                <p class="body">In Manchester the festival carries the same meaning. Families travel from across Greater
-                  Manchester and the rest of the United Kingdom to give thanks, greet elders, wear traditional dress,
-                  and pass the customs of home to children who are growing up here.</p>
-                <p class="body">Everyone is welcome. You do not need to be Igbo to join us, only curious and ready to
-                  celebrate.</p>
-                <div class="btn-row"><button class="btn btn-outline" onclick="showPage('aboutIriji')">Read about
-                    Iriji</button></div>
+          <!-- Welcome to Iriji Section (Cinematic Video Banner & Story) -->
+          <section class="welcome-section" id="welcome-iriji">
+            <div class="welcome-media-frame">
+              <video id="welcome-video"
+                class="welcome-video-player"
+                poster="uploads/web-short-poster.webp"
+                preload="auto"
+                autoplay
+                muted
+                loop
+                playsinline>
+                <source src="uploads/web-short.mp4" type="video/mp4" />
+                <source src="uploads/web-short-720p.mp4" type="video/mp4" media="(max-width: 768px)" />
+                <source src="uploads/web-short.webm" type="video/webm" />
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="welcome-gradient-overlay">
+                <span class="welcome-tag">WELCOME TO IRIJI</span>
+              </div>
+              <button id="welcome-sound-btn" class="welcome-sound-toggle" aria-label="Unmute video" onclick="toggleWelcomeSound()">🔇</button>
+            </div>
+
+            <div class="wrap welcome-content-wrap reveal">
+              <h2 class="welcome-headline">The first yam of the season, shared with the whole community</h2>
+              <div class="welcome-body-text">
+                <p>Iriji is the Igbo New Yam Festival. It marks the end of the farming season and the moment when the first yams of the harvest may be eaten. Yam is the king of crops in Igbo land, so the day begins with thanksgiving to Chukwu, prayers led by elders, and the breaking and sharing of yam.</p>
+                <p>In Manchester the festival carries the same meaning. Families travel from across Greater Manchester and the rest of the United Kingdom to give thanks, greet elders, wear traditional dress, and pass the customs of home to children who are growing up here.</p>
+                <p>Everyone is welcome. You do not need to be Igbo to join us, only curious and ready to celebrate.</p>
+              </div>
+              <div class="welcome-cta-row">
+                <button class="btn-welcome-gold" onclick="showPage('aboutIriji')">Read about Iriji</button>
               </div>
             </div>
           </section>

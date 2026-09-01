@@ -236,11 +236,22 @@
           <div class="wrap stack-lg">
             <div class="cards">
               <div class="card card-2">
-                <div class="player"><button class="play" aria-label="Play video">▶</button><span
-                    class="small body-dim">Festival highlights · video embed</span></div><span class="card-body"><span
-                    class="card-meta">Highlights</span><span class="card-t">Iriji 2025 highlights</span><span
+                <div class="video-frame-wrapper" style="aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000;">
+                  <video class="festival-video-player"
+                    poster="uploads/web-short-poster.webp"
+                    preload="metadata"
+                    playsinline
+                    controls>
+                    <source src="uploads/web-short.mp4" type="video/mp4" />
+                    <source src="uploads/web-short-720p.mp4" type="video/mp4" />
+                    <source src="uploads/web-short.webm" type="video/webm" />
+                    Your browser does not support HTML5 video.
+                  </video>
+                </div>
+                <span class="card-body"><span
+                    class="card-meta">Highlights</span><span class="card-t">Festival Highlights Teaser</span><span
                     class="card-d">The ceremony, the dancing and the crowd, cut into a short film of the
-                    day.</span></span>
+                    festival atmosphere.</span></span>
               </div>
               <div class="card card-2">
                 <div class="player"><button class="play" aria-label="Play video">▶</button><span

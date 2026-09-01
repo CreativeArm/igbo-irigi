@@ -2612,3 +2612,185 @@ body.menu-open {
     padding: var(--sp-6)
   }
 }
+
+/* ── Transformed Welcome to Iriji Section ────────────────── */
+.welcome-section {
+  position: relative;
+  background: var(--white-warm);
+  padding: 0 0 var(--sp-10);
+  overflow: hidden;
+}
+
+.welcome-media-frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 560px;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.welcome-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0.85) 90%, #000000 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 28px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.welcome-tag {
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.welcome-sound-toggle {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.welcome-sound-toggle:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.85);
+  border-color: var(--gold-2);
+}
+
+.welcome-content-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px var(--sp-6) 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-headline {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: #3b3630;
+  margin-bottom: 28px;
+  text-wrap: balance;
+}
+
+.welcome-body-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin-bottom: 36px;
+}
+
+.welcome-body-text p {
+  font-size: var(--fs-16);
+  line-height: 1.72;
+  color: #4a453d;
+  text-align: center;
+  margin: 0;
+}
+
+.welcome-cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-welcome-gold {
+  background: #f7be48;
+  color: #1c1810;
+  font-family: var(--font-display);
+  font-size: var(--fs-15);
+  font-weight: 700;
+  padding: 14px 42px;
+  border-radius: var(--r-pill);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(247, 190, 72, 0.38);
+  transition: transform 0.25s var(--ease-1), box-shadow 0.25s var(--ease-1), background 0.2s ease;
+}
+
+.btn-welcome-gold:hover {
+  transform: translateY(-2px);
+  background: #f8c95e;
+  box-shadow: 0 8px 24px rgba(247, 190, 72, 0.55);
+}
+
+@media (max-width: 768px) {
+  .welcome-media-frame {
+    aspect-ratio: 16 / 9;
+    max-height: 360px;
+  }
+
+  .welcome-tag {
+    font-size: var(--fs-14);
+    letter-spacing: 0.2em;
+    padding: 0 16px;
+  }
+
+  .welcome-content-wrap {
+    padding: 36px var(--sp-4) 0;
+  }
+
+  .welcome-headline {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .welcome-body-text {
+    margin-bottom: 26px;
+  }
+
+  .welcome-body-text p {
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .btn-welcome-gold {
+    padding: 12px 32px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
