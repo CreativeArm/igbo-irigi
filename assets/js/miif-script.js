@@ -486,18 +486,4 @@ function bindWelcomeVideo() {
   }
 }
 
-function toggleWelcomeSound() {
-  const video = document.getElementById('welcome-video');
-  const btn = document.getElementById('welcome-sound-btn');
-  if (!video || !btn) return;
-  video.muted = !video.muted;
-  if (video.muted) {
-    btn.textContent = '🔇';
-    btn.setAttribute('aria-label', 'Unmute video');
-  } else {
-    btn.textContent = '🔊';
-    btn.setAttribute('aria-label', 'Mute video');
-  }
-}
-
 
